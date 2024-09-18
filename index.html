@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sitBloodcamp</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="nav-left">
+            <h1>sitBloodcamp</h1>
+        </div>
+        <div class="nav-right" id="nav-links">
+            <a href="#">Home</a>
+            <a href="#register">Register</a>
+            <a href="#">About Us</a>
+        </div>
+    </nav>
+
+    <!-- Main Content Section -->
+    <section class="main-section">
+        <!-- Search Section -->
+        <div class="search-container">
+            <h2>Find Blood Group</h2>
+            <div class="search-box">
+                <form action="donors.php" method="POST">
+                    <label for="bloodgroup">Select Blood Group:</label>
+                    <select name="bloodgroup" id="bloodgroup" required>
+                        <option value="">--Select--</option>
+                        <option value="A+">A+</option>
+                        <option value="A-">A-</option>
+                        <option value="B+">B+</option>
+                        <option value="B-">B-</option>
+                        <option value="O+">O+</option>
+                        <option value="O-">O-</option>
+                        <option value="AB+">AB+</option>
+                        <option value="AB-">AB-</option>
+                    </select>
+                    <button type="submit">Search</button>
+                </form>
+                
+            </div>
+            <p>Not Registered? <a href="#register">Register here</a></p>
+        </div>
+
+        <!-- Register Section -->
+        <div class="register-container" id="register">
+            <h2>Register as a Donor</h2>
+            <form action="register.php" method="POST">
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" required>
+
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+
+                <label for="department">Department:</label>
+                <input type="text" id="department" name="department" required>
+
+                <label for="mobile">Mobile Number:</label>
+                <input type="tel" id="mobile" name="mobile" required>
+
+                <label for="blood-group-form">Blood Group:</label>
+                <select id="blood-group-form" name="bloodgroup" required>
+                    <option value="">--Select--</option>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                </select>
+
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

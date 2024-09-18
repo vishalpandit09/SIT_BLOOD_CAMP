@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Navigation Bar Styling */
+nav {
+    background-color: #ff4d4d;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    position: relative;
+}
+
+nav h1 {
+    font-size: 1.5em;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 1.1em;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.nav-right {
+    display: flex;
+}
+
+.nav-right.mobile-hidden {
+    display: none;
+}
+
+.nav-toggle {
+    display: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+/* Main Section Styling */
+.main-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 40px 20px;
+    flex-wrap: wrap;
+}
+
+.search-container,
+.register-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex-basis: 45%;
+    margin-bottom: 20px;
+}
+
+/* Search Container Styling */
+.search-container h2,
+.register-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.search-box {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px; /* Adds spacing between the select and button */
+    margin-bottom: 20px;
+}
+
+.search-box select,
+.search-box button {
+    padding: 10px;
+    font-size: 1em;
+}
+
+.search-box select {
+    flex: 1;
+}
+
+.search-box button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.search-box button:hover {
+    background-color: #d43d3d;
+}
+
+.search-container p {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Register Form Section */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 10px;
+}
+
+form input,
+form select {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #d43d3d;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .main-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search-container,
+    .register-container {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+    }
+
+    .search-box {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-box select,
+    .search-box button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .nav-right {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        background-color: #ff4d4d;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-right a {
+        padding: 10px;
+        border-top: 1px solid #fff;
+        margin: 0;
+    }
+}
+
+@media (min-width: 768px) {
+    .search-container,
+    .register-container {
+        flex-basis: 45%;
+    }
+
+    .nav-right {
+        display: flex;
+    }
+}
